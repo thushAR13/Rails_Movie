@@ -4,4 +4,7 @@ class MoviesController < ApplicationController
         @movies=Movie.all
 
     end
+    def higross
+
+    end
 end
