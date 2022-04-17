@@ -1,0 +1,14 @@
+<h1> Movie list </h1>
+ <body>
+
+<% @movies.each do |movie| %>
+<% m = movie %>
+Title of the movie: <%= m.title %> <br>
+Movie director: <%= m.director%> <br>
+Language of the movie: <%= m.language %> <br>
+Description of the movie : <%= m.description %> <br>
+
+
+<% end %>
+
+</body>
