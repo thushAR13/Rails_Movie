@@ -12,6 +12,48 @@
         <%= link_to 'Highest Grossing Movies', movies_higross_path, class:"nav-link active"%>
          
         </li>
+        <li class="nav-item">
+       <%= link_to 'Watchlist', watchlist_path, class:"nav-link active"%> 
+       </li>
+
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Reviews and Ratings</a>
+        </li>
+        <% if user_signed_in? %>
+        
+        </li>
+
+       </li>
+ 
+       <li class="nav-item" class = "nav navbar-nav navbar-right">  
+
+      <%= button_to 'Sign out  ', destroy_user_session_path, method: :delete, class:"btn btn-dark"%> 
+      
+      <li class="nav-item">
+      <%= link_to 'Edit profile', edit_user_registration_path, class:"nav-link active"%> 
+      </li>
+      
+
+      </li>
+      <li class = "justify-content-end">
+      <li class = "nav-link active" > 
+      <%= current_user.email %>
+     
+      
+      </li>
+      
+ 
+    <% else %>
+       </li>
+       <li class="nav-item">
+      <%= link_to 'Sign up', new_user_registration_path, class:"nav-link active"%> 
+      </li>
+      <li class="nav-item">
+      <%= link_to 'Sign in', new_user_session_path, class:"nav-link active"%> 
+      </li>
+
+<% end %>
 
 
       </ul>

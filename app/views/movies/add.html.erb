@@ -1,0 +1,21 @@
+
+<%= form_with(model: @watchlist) do |list| %>
+
+<div>
+    <%= list.label :name, style: "display: block" %>
+    <%= list.text_field :name %>
+  </div>
+
+
+<div>
+    <%= list.label :language, style: "display: block" %>
+    <%= list.text_field :language %>
+  </div>
+
+
+  <div>
+
+    <%= list.submit %>
+  </div>
+<% end %>
+

@@ -1,0 +1,37 @@
+<h1>Watchlist</h1>
+<% count = 1%>
+
+<body>
+<table class="table table-dark table-striped">
+<thead>
+<tr>
+  <th scope="col">#</th>
+  <th scope="col">Name</th>
+  <th scope="col">Language</th>
+  
+</tr>
+<tbody>
+<% @watchlist.each do |list| %>
+    <% w = list %>
+    <tr>
+    <th scope="row"><%= count %></th>
+    <td> <%=w.name%> </td>
+    <td> <%= w.language%> </td>
+    <% count += 1%>
+    
+  </tr>
+
+<%end%>
+</tbody>
+</table>
+
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <%= link_to 'ADD Movie', add_path, class: 'btn btn-primary me-md-2' %>
+  
+  
+</div>  
+    
+
+
+
+</body>
