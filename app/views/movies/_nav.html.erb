@@ -34,14 +34,17 @@
       <%= link_to 'Edit profile', edit_user_registration_path, class:"nav-link active"%> 
       </li>
       
-
-      </li>
-      <li class = "justify-content-end">
-      <li class = "nav-link active" > 
+      <div class="float-right">
+      <li class = "nav-link active float-right" > 
+    
       <%= current_user.email %>
-     
       
       </li>
+      
+    </div>
+      </li>
+      
+ 
       
  
     <% else %>

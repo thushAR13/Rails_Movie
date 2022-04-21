@@ -1,13 +1,24 @@
 <h1> Movie list </h1>
  <body>
 
+
+ 
+ 
+
+
+
 <% @movies.each do |movie| %>
 <% m = movie %>
-<br><br>
-Title of the movie: <%= m.title %> <br>
-Movie director: <%= m.director%> <br>
-Language of the movie: <%= m.language %> <br>
-Description of the movie : <%= m.description %> <br>
+<div class="container py-4 px-2 my-3 rounded" style="background:#E9ECEF">
+<br>
+<h4 class="display-4 pb-2"><%= m.title %> <br></h4>
+<p class="lead">Director: <%= m.director%></p>
+<p class="lead">Language: <%= m.language %> </p>
+<p class="py-2"><%= m.description %></p>
+
+
+
+</div>
 
 
 <% end %>
